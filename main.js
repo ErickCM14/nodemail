@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require('body-parser')
 var cors = require("cors");
 
+const port = process.env.PORT || 3000;
 //const { response } = require("express");
 var app = express();
 
@@ -19,7 +20,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor en => http://localhost:3000");
 })
 
