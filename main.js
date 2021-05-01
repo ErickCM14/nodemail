@@ -11,14 +11,6 @@ var app = express();
 app.use(cors());
 app.use(bodyParser.json())
 
-app.get('/prueba', function (req, res, next) {
-    res.send("This is CORS-enabled for all origins!")
-})
-
-app.post('/prueba', function (req, res, next) {
-    res.send("This is CORS-enabled for all origins! POST")
-})
-
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
 //     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
@@ -41,6 +33,22 @@ let transporter = nodemailer.createTransport({
 app.listen(port, () => {
     console.log("Servidor en => http://localhost:3000");
 })
+
+
+//EJEMPLOS
+app.get('/prueba', function (req, res, next) {
+    res.send("This is CORS-enabled for all origins!")
+})
+
+app.post('/prueba', function (req, res, next) {
+    res.send("This is CORS-enabled for all origins! POST")
+})
+
+app.post('/pruebaMensaje', function (req, res, next) {
+    let mensaje =  req.body
+    res.send(mensaje);
+})
+//----------
 
  app.get("/", (req, res) => {
     res.send("<h1 style= 'height:100vh; display:flex; justify-content:center; align-items:center; font-size:100px; '>Mercadology</h1>");
