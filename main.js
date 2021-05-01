@@ -93,7 +93,7 @@ async function sendBackup(archivo, callback) {
 
 //Envia correo con cuentas  a punto de vencer
 app.post("/send-email", (req, res) => {
-
+res.send("Hola");
     let user = req.body;
 
     let mensaje = "<p style='font-size:15px'><strong>Cuentas que sus servicios estan por vencer:</strong></p>"
