@@ -15,6 +15,10 @@ app.get('/prueba', function (req, res, next) {
     res.send("This is CORS-enabled for all origins!")
 })
 
+app.post('/prueba', function (req, res, next) {
+    res.send("This is CORS-enabled for all origins! POST")
+})
+
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
 //     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
