@@ -21,7 +21,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor en => http://localhost:3000");
 })
 
