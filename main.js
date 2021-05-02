@@ -5,6 +5,7 @@ var cors = require("cors");
 
 //const { response } = require("express");
 var app = express();
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json())
@@ -19,7 +20,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor en => http://localhost:3000");
 })
 
