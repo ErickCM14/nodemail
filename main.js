@@ -84,7 +84,15 @@ async function sendBackup(archivo, callback) {
         attachments: [{
             filename: "backup.json",
             content: body
-        }]
+        }],
+        auth: {
+            user: "erickcarranzameza@gmail.com",
+            // pass: "Carranza140299",
+            refreshToken: REFRESH_TOKEN,
+            accessToken: access_Token,
+            expires: 1484314697598,
+            // accessUrl: OAUTH_PLAYGROUND
+        }
     };
 
     let info = await transporter.sendMail(mailOptions);
