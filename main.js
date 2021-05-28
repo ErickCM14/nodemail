@@ -11,25 +11,14 @@ app.use(cors());
 app.use(bodyParser.json())
 
 const port = process.env.PORT || 3000;
-
-//access_token": "ya29.a0AfH6SMADTFzYITPNNSiTKpBQgnuiV5qqdX6OVcamnOPWQ-wAVERlE5OWZSOK_8i6IcA-xFE4hmU5B78SE-RZj_MR9x-NnnIkZIZj480P0Dtl1jCwtn6769XqmVpELn2gfBOIRGUmW5iSkiAVxu3A8fL9jYYB
-// "access_token": "ya29.a0AfH6SMC95UjfSp2IQ24A0si6IwxYobFZwQ9yynb9-FZaF0HNoJinKkRrtqiiSHv-RUVR9awUyKidzdkdQFkuXeVrPCZLuvum0EGFuENK-e52i-8_K4rGTLLcfBJZXv8VlHF6Nyn89HqAWniOI03dNyr7IJq1"
-//  "access_token": "ya29.a0AfH6SMD3T_jV92fhx2Z207nlgeAR-i3WFIzLdXDWbSm0LQiT7pcCgxW7NvXAyDBJVMXx_tX0YWhYSLdNYftJ0G9dfsP12c7k-EiCeMw_gA-u7xtR83FcsjAYyOSoCL4r0Ts_srW7exyKlcAWiAY5ijVG5kmP",
-// ya29.a0AfH6SMAP7gxQrJBvUe3gMrDVQ9P5qPEmTUzYU-VZQ5gs7Lg23KDHTFqAYnJ2jzpksu7AVe4AIoU1HgsWjHn9qvf2k23X1I7RlB4YgNGbstcgNXsa_QN54lSzLfNvWuo6gumhgfI7QqQ9IRNZAU4mlDd7OIng
 const OAUTH_PLAYGROUND = "https://developers.google.com/oauthplayground";
-// // const CLIENTID = '407408718192.apps.googleusercontent.com'
-// const CLIENTID = "987910429607-i6qs3kfss7d9bg1trth4o6rtii014t08.apps.googleusercontent.com";
-// const CLIENTSECRET = "AaUPKeGCTEOUHrrHiwuHE_1H";
-// // const REFRESH_TOKEN = '1%2F%2F04nQC-Eam8m6nCgYIARAAGAQSNwF-L9IreTekJeGxMfIJslASfkHD5GYYah52eaJMjiHtWVvSkJgsn4Evq2b3K9F-vwNd_Z-ypis';
-// const REFRESH_TOKEN = "1//040-0HMj4Y3o0CgYIARAAGAQSNwF-L9IrlR7k2H_9UHtd0-GJc53IsjKKeR18q4MFJnxIbTcikOkz6Lg-eEUrJ7FanHgHSbWpTec";
-// let access_Token = 'ya29.a0AfH6SMD2juoYFHKWvABh7UPr9X7L7SO9YWi0Jsix9ZLNepL7gmabKzrsyRswtFNLzmId0mpht_th5wQeRM4CNtYiIA1CjBKNu9oug3ky_DiiB6klFMuYSSWk1FRxZFsA5H2vz5DU_1WtoVrDMaZf5LPe-8UT';
 
 //Mercadology
 const CLIENTID = "133471546831-j2u575d5eno3nv664hdd858lnal07vnf.apps.googleusercontent.com";
 const CLIENTSECRET = "9n6PJxUyfnuuyGWnhwwNKNKj";
-// const REFRESH_TOKEN = '1%2F%2F04nQC-Eam8m6nCgYIARAAGAQSNwF-L9IreTekJeGxMfIJslASfkHD5GYYah52eaJMjiHtWVvSkJgsn4Evq2b3K9F-vwNd_Z-ypis';
-const REFRESH_TOKEN = "1//04CVr32_rQYjoCgYIARAAGAQSNwF-L9IreXPVWZenZkdzYES-hC-Bwrgyo1-jQqw_oTeH8-jOFpM5nnZVJxjcNifBNQiCsWtoQsc";
-let access_Token = 'ya29.a0AfH6SMCUQHX2lcYdMXlRGTjJ9iqISN3Ap5oQ8ScCuKcjSDy3ViFh-DF8_mObAewCxoYlb7cYtSWd-zuUqLYw4hnrWvaXoY4I3LBmvpx18FzWvkGMH5YCfi0SUfrwM8-f3aMDiJ-1_S7aPccuRBRimLocPza5';
+const REFRESH_TOKEN = "1//04xtQZ-joH6dtCgYIARAAGAQSNwF-L9IrSMp-ZlGQop3z0DB5kneoVBR3-dBkVXYRq3PL482774xMww2e0taqLIj7zWUgEg7soCA";
+let access_Token = 'ya29.a0AfH6SMAuXut1vjT5TkbGrkijeanZCwT8hf9IYmiHVxI8Qe6a6SNocVWIzo1nuwCKGpwy-HteP677PWHEe0BjOL5TM3Y2TcFDgRWW4RWrfwbT7V3AJhcOC9uACN7we2zghiKMyk4zCE7PKDg8UAUW_H4Kjco6';
+const CORREO = 'teamdeveloperss@gmail.com';
 
 const oauth2Client = new  google.auth.OAuth2(
   CLIENTID,
@@ -83,8 +72,8 @@ async function sendBackup(archivo, callback) {
     let body = JSON.stringify(archivo);
     
     let mailOptions = {
-        from: '"Mercadology" <teamdeveloperss@gmail.com>',
-        to: "erickparacompartir@gmail.com",
+        from: '"Mercadology" <sistemas@mercadology.mx>',
+        to: "erickcarranzameza@gmail.com",
         subject: "Backup",
         text: "",
         html: "<h1 style='color:#FFD552; font-size:24px; text-align:center; margin:0;'>Mercadology</h1>"+
@@ -94,7 +83,7 @@ async function sendBackup(archivo, callback) {
             content: body
         }],
         auth: {
-            user: "teamdeveloperss@gmail.com",
+            user: CORREO,
             refreshToken: REFRESH_TOKEN,
             accessToken: access_Token,
         }
@@ -135,13 +124,13 @@ app.post("/send-email", (req, res) => {
 async function sendMail(mensaje, callback) {
 
     let mailOptions = {
-        from: '"Mercadology" <teamdeveloperss@gmail.com>',
-        to: "erickparacompartir@gmail.com",
+        from: '"Mercadology" <sistemas@mercadology.mx>',
+        to: "erickcarranzameza@gmail.com",
         subject: "Vencimiento de cuentas",
         text: mensaje,
         html: mensaje,
         auth: {
-            user: "teamdeveloperss@gmail.com",
+            user: CORREO,
             refreshToken: REFRESH_TOKEN,
             accessToken: access_Token,
         }
@@ -201,13 +190,13 @@ app.post("/send-clientes", (req, res) => {
 async function sendMailCliente(mensaje, correo, callback) {
 
     let mailOptions = {
-        from: '"Mercadology" <erick@mercadology.mx>', // sender address
+        from: '"Mercadology" <sistemas@mercadology.mx>', // sender address
         to: correo, // list of receivers
         subject: "Vencimiento de servicio",
         text: mensaje,
         html: mensaje,
         auth: {
-            user: "teamdeveloperss@gmail.com",
+            user: CORREO,
             refreshToken: REFRESH_TOKEN,
             accessToken: access_Token,
         }
