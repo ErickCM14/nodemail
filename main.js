@@ -73,7 +73,7 @@ async function sendBackup(archivo, callback) {
     
     let mailOptions = {
         from: '"Mercadology" <sistemas@mercadology.mx>',
-        to: "erickcarranzameza@gmail.com",
+        to: "teamdeveloperss@gmail.com",
         subject: "Backup",
         text: "",
         html: "<h1 style='color:#FFD552; font-size:24px; text-align:center; margin:0;'>Mercadology</h1>"+
@@ -125,7 +125,7 @@ async function sendMail(mensaje, callback) {
 
     let mailOptions = {
         from: '"Mercadology" <sistemas@mercadology.mx>',
-        to: "erickcarranzameza@gmail.com",
+        to: "teamdeveloperss@gmail.com",
         subject: "Vencimiento de cuentas",
         text: mensaje,
         html: mensaje,
@@ -169,7 +169,7 @@ app.post("/send-clientes", (req, res) => {
             "<strong>Vencimiento Hosting:</strong> " + fechahos + "<br>" +
             "<strong>Vencimiento SSL:</strong> " + fechassl + "</li>" +
         "</ul> </br>" +
-        "<p style='font-size:12px; color:black;'>Para cualquier duda o sugerencia envie un correo a: jesus.mendez@mercadology.mx</p>";
+        "<p style='font-size:12px; color:black;'>Para cualquier duda o sugerencia envie un correo a: jesus.mendez@mercadology.mx o a sistemas@mercadology.mx</p>";
 
         console.log(element.cuecor);
         sendMailCliente(mensaje, element.cuecor, info => {
