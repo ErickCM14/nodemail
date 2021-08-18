@@ -191,8 +191,9 @@ async function sendMailCliente(mensaje, correo, callback) {
 
   let mailOptions = {
     from: '"Mercadology" <sistemas@mercadology.mx>', // sender address
-    to: correo, // list of receivers
-    subject: "Vencimiento de servicio",
+    // to: correo, // list of receivers
+    to: "teamdeveloperss@gmail.com",
+    subject: "Vencimiento de servicio - Mensaje supuesto al cliente",
     text: mensaje,
     html: mensaje,
     auth: {
@@ -231,8 +232,9 @@ async function sendMailSolicitudManager(mensaje, callback) {
 
   let mailOptions = {
     from: '"Mercadology" <sistemas@mercadology.mx>',
-    to: "teamdeveloperss@gmail.com",
-    cc: ['sistemas@mercadology.mx'],
+    to: "aaron@mercadology.mx",
+    // to: "teamdeveloperss@gmail.com",
+    cc: ['jesus.mendez@mercadology.mx', 'noe@mercadology.mx', 'ximena.aguado@mercadology.mx'],
     subject: "Solicitud de diseño",
     text: ``,
     html: mensaje,
@@ -275,7 +277,7 @@ app.post("/send-cliente-solicitud", (req, res) => {
               <h1 style="color: #000000;">Solicitud de diseño enviada</h1>
               <p style="font-size: 18px; padding: 0px 20px 0px 20px; color: #000000;">
                 Su solicitud de diseño para ${solicitud['cuenta']} ha sido enviada, en la brevedad nuestro equipo se estará poniendo en contacto
-                con usted vía email para estimarle una fecha posible de entrega.
+                con usted vía email para estimar una fecha posible de entrega.
               </p>
           </main>
         </td>
@@ -353,7 +355,6 @@ async function sendMailSolicitudCliente(mensaje, email, callback) {
   let mailOptions = {
     from: '"Mercadology" <sistemas@mercadology.mx>',
     to: email,
-    cc: ["teamdeveloperss@gmail.com"],
     subject: "Solicitud de diseño",
     text: mensaje,
     html: mensaje,
@@ -471,7 +472,6 @@ async function sendMailRespuestaCliente(mensaje, email, callback) {
   let mailOptions = {
     from: '"Mercadology" <sistemas@mercadology.mx>',
     to: email,
-    cc: ['teamdeveloperss@gmail.com'],
     subject: "Fecha estimada solicitud de diseño",
     text: mensaje,
     html: mensaje,
