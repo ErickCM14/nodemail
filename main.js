@@ -20,6 +20,11 @@ const REFRESH_TOKEN = "1//04xtQZ-joH6dtCgYIARAAGAQSNwF-L9IrSMp-ZlGQop3z0DB5kneoV
 let access_Token = 'ya29.a0AfH6SMAuXut1vjT5TkbGrkijeanZCwT8hf9IYmiHVxI8Qe6a6SNocVWIzo1nuwCKGpwy-HteP677PWHEe0BjOL5TM3Y2TcFDgRWW4RWrfwbT7V3AJhcOC9uACN7we2zghiKMyk4zCE7PKDg8UAUW_H4Kjco6';
 const CORREO = 'teamdeveloperss@gmail.com';
 
+app.listen(port, () => {
+  console.log(`Servidor en => ${port}`);
+})
+
+
 // const oauth2Client = new google.auth.OAuth2(
 //   CLIENTID,
 //   CLIENTSECRET,
@@ -30,13 +35,10 @@ const CORREO = 'teamdeveloperss@gmail.com';
 //   refresh_token: REFRESH_TOKEN
 // });
 
-access_Token = oauth2Client.getAccessToken();
-//   .then(tokens => (accessToken = tokens.credentials.access_token));
-console.log(access_Token);
+// access_Token = oauth2Client.getAccessToken();
+//  // .then(tokens => (accessToken = tokens.credentials.access_token));
+// console.log(access_Token);
 
-app.listen(port, () => {
-  console.log(`Servidor en => ${port}`);
-})
 
 // let transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
