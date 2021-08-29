@@ -72,7 +72,7 @@ async function sendBackup(archivo, callback) {
   let body = JSON.stringify(archivo);
 
   let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>',
+    from: 'Mercadology <sistemas@mercadology.mx>',
     to: "teamdeveloperss@gmail.com",
     subject: "Backup",
     text: "",
@@ -123,8 +123,8 @@ app.post("/send-email", (req, res) => {
 
 async function sendMail(mensaje, callback) {
 
-  let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>',
+  let mailOptions = {    
+    from: 'Mercadology <sistemas@mercadology.mx>',
     to: "teamdeveloperss@gmail.com",
     subject: "Vencimiento de cuentas",
     text: mensaje,
@@ -190,7 +190,7 @@ app.post("/send-clientes", (req, res) => {
 async function sendMailCliente(mensaje, correo, callback) {
 
   let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>', // sender address
+    from: 'Mercadology <sistemas@mercadology.mx>', // sender address
     // to: correo, // list of receivers
     to: "teamdeveloperss@gmail.com",
     subject: "Vencimiento de servicio - Mensaje supuesto al cliente",
@@ -231,7 +231,7 @@ app.post("/send-solicitud-manager", (req, res) => {
 async function sendMailSolicitudManager(mensaje, callback) {
 
   let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>',
+    from: 'Mercadology <sistemas@mercadology.mx>',
     // to: "aaron@mercadology.mx",
     // to: "teamdeveloperss@gmail.com",
     to:"erick.info.oficial@gmail.com",
@@ -354,7 +354,7 @@ app.post("/send-cliente-solicitud", (req, res) => {
 async function sendMailSolicitudCliente(mensaje, email, callback) {
 
   let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>',
+    from: 'Mercadology <sistemas@mercadology.mx>',
     to: email,
     subject: "Solicitud de diseño",
     text: mensaje,
@@ -471,7 +471,7 @@ app.post("/send-respuesta-cliente", (req, res) => {
 async function sendMailRespuestaCliente(mensaje, email, callback) {
 
   let mailOptions = {
-    from: '"Mercadology" <sistemas@mercadology.mx>',
+    from: 'Mercadology <sistemas@mercadology.mx>',
     to: email,
     subject: "Fecha estimada solicitud de diseño",
     text: mensaje,
