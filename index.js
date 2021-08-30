@@ -52,7 +52,7 @@ let transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  res.send("<h1 style= 'height:100vh; display:flex; justify-content:center; align-items:center; font-size:100px; '>Mercadology</h1>");
+  res.send("<h1 style= 'height:100vh; display:flex; justify-content:center; align-items:center; font-size:100px; '>Mercadology ECM</h1>");
   console.log("Hola Mercadology");
 })
 
