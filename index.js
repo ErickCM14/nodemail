@@ -232,10 +232,10 @@ async function sendMailSolicitudManager(mensaje, callback) {
 
   let mailOptions = {
     from: 'Mercadology <sistemas@mercadology.mx>',
-    // to: "aaron@mercadology.mx",
+    to: "aaron@mercadology.mx",
     // to: "teamdeveloperss@gmail.com",
-    to:"erick.info.oficial@gmail.com",
-    // cc: ['jesus.mendez@mercadology.mx', 'noe@mercadology.mx', 'ximena.aguado@mercadology.mx'],
+    // to:"erick.info.oficial@gmail.com",
+    cc: ['jesus.mendez@mercadology.mx', 'noe@mercadology.mx', 'ximena.aguado@mercadology.mx'],
     subject: "Solicitud de diseño",
     text: ``,
     html: mensaje,
